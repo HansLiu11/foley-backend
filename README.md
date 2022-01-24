@@ -1,12 +1,12 @@
-# foley-backend
+# :desktop_computer: Foley-backend
 
-## Install Package
+## 🔧 Install Package
 
 ```shell
 $ npm install
 ```
 
-## Start Project
+## :rocket: Start Project
 
 ```shell
 $ nodemon
