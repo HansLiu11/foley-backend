@@ -19,7 +19,7 @@ else {
 const LoggerInstance = winston.createLogger({
     // 當 transport 不指定 level 時 , 使用 info 等級
     level: 'info',
-    // 設定輸出格式
+    // 設定輸出格式0
     format: winston.format.json(),
     // 設定此 logger 的日誌輸出器
     transports,
