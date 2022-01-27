@@ -2,11 +2,18 @@
 
 ## 🔧 Install Package
 
-```shell
+```shell=
 $ npm install
 ```
 
 ## :rocket: Start Project
 
-```shell
+```shell=
 $ nodemon
+```
+
+##  :pencil: Commit
+```shell=
+$ git add
+$ git-cz
+```
