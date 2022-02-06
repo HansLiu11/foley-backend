@@ -8,9 +8,18 @@ if (envFound.error) {
   throw new Error(".env file not found");
 }
 
+const mongo_userName = process.env.DB_USERNAME || "user0" ;
+const mongo_password = process.env.DB_PASSWORD || "test123" ;
+const mongo_dabaseName = process.env.DB_NAME || "patientDB";
+const mongo_HOST = process.env.DB_HOST || "patient0.iooez.mongodb.net"
+
 export default {
   port: process.env.PORT,
-  databaseURL: process.env.DB_URL,
+  databaseURL: `mongodb+srv://${mongo_userName}:${mongo_password}@${mongo_HOST}/${mongo_dabaseName}?ssl=true&retryWrites=true&w=majority`,
+  options:{
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
   api: {
     prefix: "/api",
   },
