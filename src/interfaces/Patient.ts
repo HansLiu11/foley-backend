@@ -1,13 +1,16 @@
-import { Document } from "mongoose";
+import type { WithId, Document } from 'mongodb'
 
-export default interface Patient extends Document{
-    name: String,
-    gender:String,
-    bed:String,
-    case:String,
-    age:Number,
-    day:Number,
-    foleyStatus:String,
-    state:String,
-    insertedDate?:Date
+export default interface Patient extends WithId<Document>{
+    id:number,
+    name: string,
+    gender:string,
+    bed:string,
+    case:string,
+    age:number,
+    day:number,
+    foleyStatus:string,
+    state:string,
+    insertedDate?:Date,
+    createdAt:Date,
+    updatedAt:Date
 }

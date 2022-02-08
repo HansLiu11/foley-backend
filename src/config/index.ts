@@ -16,10 +16,6 @@ const mongo_HOST = process.env.DB_HOST || "patient0.iooez.mongodb.net"
 export default {
   port: process.env.PORT,
   databaseURL: `mongodb+srv://${mongo_userName}:${mongo_password}@${mongo_HOST}/${mongo_dabaseName}?ssl=true&retryWrites=true&w=majority`,
-  options:{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  },
   api: {
     prefix: "/api",
   },
