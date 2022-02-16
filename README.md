@@ -9,11 +9,17 @@ $ npm install
 ## :rocket: Start Project
 
 ```shell=
-$ nodemon
+$ docker-compose build
+$ docker-compose up -d
 ```
 
-##  :pencil: Commit
+## :whale: Check containers
+```shell=
+$ docker-compose ps
+```
+
+## :pencil: Commit
 ```shell=
 $ git add
-$ git-cz
+$ git cz
 ```
