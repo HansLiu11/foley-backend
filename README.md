@@ -17,11 +17,6 @@ $ npm install
 $ nodemon
 ```
 
-## :whale: Check containers
-```shell=
-$ docker-compose ps
-```
-
 ## :pencil: Commit
 ```shell=
 $ git add
