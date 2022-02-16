@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: ./
+      target: dev
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules # Remove this if you have pure JS dependencies
+      - ./logs/backend:/usr/src/app/logs
+    ports:
+      # local:container
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      DB_USERNAME: user0
+      DB_PASSWORD: test1234
+      DB_HOST: patient0.iooez.mongodb.net
+      DB_NAME: patientDB
+      PORT: 3000
+    tty: true
+    stdin_open: true
