@@ -56,13 +56,13 @@ export default (app: Router):void => {
             });
         });
 
-    route.post("/update",
+    route.put("/update",
         async (req: Request, res: Response, next: NextFunction) => {
             const result = await patientService.setPatient(req.body);
             return res.status(200).json(result);
         });
 
-    route.post("/delete",
+    route.delete("/delete",
         async (req: Request, res: Response, next: NextFunction) => {
             const name = String(req.body.name);
             const msg = await patientService.deletePatient(name);
